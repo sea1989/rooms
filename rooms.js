@@ -9,7 +9,8 @@ rooms.forEach(room => {
   room.addEventListener('click', function (e) {
     let scrollY = window.scrollY;
     var rect = e.target.getBoundingClientRect();
-    posX = rect.left, posY = rect.top;
+    posX = rect.left;
+    posY = rect.top;
 
     /*  tooltip.innerText = this.dataset.title; */
     rooms.forEach(room => {
@@ -17,7 +18,6 @@ rooms.forEach(room => {
     })
     room.classList.add('room--active')
     /*  tooltip.querySelector('.room-id').innerText = this.dataset.title; */
-
     tooltip.style.top = (rect.y - 240 + scrollY) + 'px';
     tooltip.style.left = (rect.x - 158 + rect.width / 2) + 'px';
     tooltip.style.display = 'block';
