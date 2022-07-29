@@ -125,7 +125,7 @@ tabsBtn.forEach(function (item) {
   })
 })
 
-/* tabs room */
+/*  tabs building */
 
 const tabsBuilding = document.querySelectorAll('.tabs__building-btn');
 const tabsItemsBuilding = document.querySelectorAll('.tabs-building__item');
@@ -143,6 +143,10 @@ tabsBuilding.forEach(function (item) {
     }
 
     tabsItemsBuilding.forEach(function (item) {
+      item.classList.remove('active');
+    });
+
+    tabsItems.forEach(function (item) {
       item.classList.remove('active');
     });
 
